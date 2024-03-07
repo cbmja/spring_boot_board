@@ -17,3 +17,7 @@ JPA / Java Persistence API
 spring boot 에서 사용하는 ORM 기술 표준.
 jpa는 인터페이스 모음이고, 실제로는 구현한 클래스를 사용하는데 보통 하버네이트를 사용.
 정리하자면  하버네이트는 jpa를 구현한 실제 클래스이며 자바의 ORM프레임 워크이다.
+
+@GeneratedValue
+strategy = GenerationType.IDENTITY 설정을 해줘야 해당 속성에 대해 순차적인 증가가 가능함.
+설정하지 않을경우 @GeneratedValue 어노테이션이 붙은 모든 속성에 차례로 순서가 성성돼서 일정한 값을 가지지 못 함.

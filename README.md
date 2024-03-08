@@ -37,6 +37,7 @@ Repository 메서드 추가
 select subject from boardData; -> 게시글에서 특정 제목으로 찾고 싶다면 래퍼지토리에 
 BoardData findBySubject(String subject) 리턴타입 메서드명(매개변수)
 같은 방식으로 생성하면 된다. 메서드명은 findBy + '앤티티 속성명' 이어야함.
+더 다양한 쿼리는 https://docs.spring.io/spring-data/jpa/reference/jpa/query-methods.html 참조
 ---------------------------------------------------------------------------------------------------------
 
 

@@ -1,0 +1,42 @@
+package com.mysite.sbb;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Optional;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class SbbApplicationTests {
+
+	@Autowired
+	private QuestionRepository questionRepository;
+	
+	@Autowired
+	private AnswerRepository answerRepository;
+	
+	@Test
+	void testJpa() {
+	
+		Optional<Question> oq = questionRepository.findById(2);
+		assertTrue(oq.isPresent());
+		
+		Question q = oq.get();
+		
+		Answer a = new Answer();
+		a.setContent("spring 부트는  스프링 boot 입니다.");
+		a.setCreateDate(LocalDateTime.now());
+		a.setQuestion(q);
+		
+		answerRepository.save(a);
+		
+		
+		
+	}
+
+}

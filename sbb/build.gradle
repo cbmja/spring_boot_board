@@ -21,12 +21,16 @@ dependencies {
 	
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'	//자동 서버 재시작
 	
-	compileOnly 'org.projectlombok:lombok'
+	compileOnly 'org.projectlombok:lombok' //롬복
 	annotationProcessor 'org.projectlombok:lombok' //롬복
 	
 	runtimeOnly 'com.h2database:h2' //h2 DB
 	
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa' //jpa
+	
+	testImplementation 'org.junit.jupiter:junit-jupiter' //junit jupiter
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher' //junit jupiter
+	
 	
 	
 	

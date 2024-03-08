@@ -1,0 +1,11 @@
+<h1>상세</h1>
+<h3 th:text="${question.subject}"></h3>
+<h3 th:text="${question.content}"></h3>
+<hr>
+<h3 th:text="|${question.answer.size()}+개의 답변이 있습니다.|"></h3>
+<hr>
+
+<form th:action="@{|/answer/create/${question.id}|}" method="post">
+	<textarea name="content" id="content" rows="15"></textarea>
+	<input type="submit" value="답변 제출"> 
+</form>

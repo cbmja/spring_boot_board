@@ -1,0 +1,25 @@
+<link rel="stylesheet" type="text/css" th:href="@{/css}">
+
+<h1>hello question list</h1>
+
+<div class="container my-3">
+<table class="table">
+	<thead class="table-dark">
+		<tr>
+			<th>num</th>
+			<th>subject</th>
+			<th>createDate</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr th:each="question, loop : ${questionList}" th:object="${question}">
+			<td th:text="${loop.count}"></td>
+			<td>
+				<a th:href="@{|/question/detail/*{id}|}" th:text="*{subject}"></a>
+			</td>
+			<td th:text="*{#temporals.format(createDate,'yyyy-mm-dd HH:mm')}"></td>
+		</tr>
+	</tbody>
+
+</table>
+</div>

@@ -1,0 +1,14 @@
+<h1>hello question list</h1>
+
+<table>
+	<tr>
+		<th>subject</th>
+		<th>createDate</th>
+	</tr>
+	<tr th:each="question : ${questionList}" th:object="${question}">
+		<td>
+			<a th:href="@{|/question/detail/id=*{id}|}" th:text="*{subject}"></a>
+		</td>
+		<td th:text="*{createDate}"></td>
+	</tr>
+</table>

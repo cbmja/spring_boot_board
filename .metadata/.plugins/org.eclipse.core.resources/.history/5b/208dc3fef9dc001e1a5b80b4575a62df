@@ -1,0 +1,15 @@
+package com.mysite.sbb.question;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+@RequestMapping("/question")
+public class QuestionController {
+
+	@GetMapping("/list")
+	public String list() {
+		
+		return "question_list";
+	}
+}

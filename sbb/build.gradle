@@ -31,6 +31,9 @@ dependencies {
 	testImplementation 'org.junit.jupiter:junit-jupiter' //junit jupiter
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher' //junit jupiter
 	
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' //thymeleaf
+	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect' //thymeleaf
+	
 	
 	
 	

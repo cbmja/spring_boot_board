@@ -1,9 +1,11 @@
 package com.mysite.sbb.question;
 
 import java.time.LocalDateTime;
-import java.util.List;
 import java.util.Optional;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.mysite.sbb.DataNotFoundException;
@@ -16,9 +18,11 @@ public class QuestionService {
 
 	private final QuestionRepository questionRepository;
 	
-	public List<Question> getList(){
+	public Page<Question> getList( int page){
+											
+		Pageable pageable = PageRequest.of(page, 10); //현재 페이지 / 페이지당 게시글 수
 		
-		return questionRepository.findAll();
+		return questionRepository.findAll(pageable);
 	}
 	
 	public Question getQuestion(Integer id) {

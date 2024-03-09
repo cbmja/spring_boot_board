@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<!--Required meta tags-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<!--CSS-->
+		<link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}">
+		<link rel="stylesheet" type="text/css" th:href="@{/style.css}">
+		<title>hello, sbb</title>
+	</head>
+	<body>
+	<!--SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS 네비 SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS-->
+		<nav th:replace="~{navbar :: navbarFragment}"></nav>
+	<!--EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE 네비 EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE-->
+		
+	<!--SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS 컨텐츠 SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS-->
+		<th:block layout:fragment="content"></th:block>
+	<!--EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE 컨텐츠 EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE-->
+	
+	</body>
+</html>

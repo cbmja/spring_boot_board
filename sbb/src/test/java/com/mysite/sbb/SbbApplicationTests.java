@@ -22,7 +22,7 @@ class SbbApplicationTests {
 	@Test
 	void testJpa() {
 	
-		for(int i=101; i<=300; i++) {
+		for(int i=1; i<=300; i++) {
 			
 			Question question = new Question();
 			question.setSubject(i+"번 째 질문입니다.");

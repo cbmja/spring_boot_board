@@ -1,0 +1,27 @@
+package com.mysite.sbb.user;
+
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
+
+import lombok.RequiredArgsConstructor;
+
+@Service
+@RequiredArgsConstructor
+public class UserService {
+
+	private UserRepoeitory userRepoeitory;
+	private BCryptPasswordEncoder passwordEncoder;
+	
+	public void create(String username , String email , String password) {
+		
+		SiteUser user = new SiteUser();
+		user.setEmail(email);
+		user.setPassword(passwordEncoder.encode(password));
+		user.setUsername(username);
+		
+		 userRepoeitory.save(user);
+		
+	}
+	
+	
+}

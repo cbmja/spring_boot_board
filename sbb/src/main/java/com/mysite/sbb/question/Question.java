@@ -43,4 +43,6 @@ public class Question {
 	@ManyToOne
 	private SiteUser author; //글쓴이
 	
+	@Column
+	private LocalDateTime modifyDate;
 }

@@ -1,8 +1,9 @@
 <html layout:decorate="~{layout}">
 <div layout:fragment="content" class="container">
     <h5 class="my-3 border-bottom pb-2">질문등록</h5>
-    <form th:action="@{/question/create}" method="post" th:object="${questionForm}">
-		
+    <form method="post" th:object="${questionForm}"> 
+		<!--action 속성이 없다면 현재 url로 post형식으로 보냄 수정일 경우 modify/{id} / 생성일 경우 create -->
+		<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
 		<div th:replace="~{form_errors :: formErrorsFragment}"></div>
 		
         <div class="mb-3">

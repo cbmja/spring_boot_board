@@ -39,7 +39,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-security' //spring security
 	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6' //spring security
 	
-	
+	implementation 'org.commonmark:commonmark:0.21.0' //마크다운
 	
 	
 	
